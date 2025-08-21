@@ -1,0 +1,165 @@
+=== Step 1/2: Build image dataset ===
+[MIT-BIH] 48 records
+  100: saved Normal 1500
+  101: saved Normal 1500
+  102: saved Normal 127
+  103: saved Normal 1500
+  104: saved Normal 140
+  105: saved Normal 1500
+  106: saved Normal 1500
+  107: saved Normal 0
+  108: saved Normal 1500
+  109: saved Normal 0
+  111: saved Normal 0
+  112: saved Normal 1500
+  113: saved Normal 1500
+  114: saved Normal 1500
+  115: saved Normal 1500
+  116: saved Normal 1500
+  117: saved Normal 1500
+  118: saved Normal 0
+  119: saved Normal 1500
+  121: saved Normal 1500
+  122: saved Normal 1500
+  123: saved Normal 1500
+  124: saved Normal 0
+  200: saved Normal 1235
+  201: saved Normal 1500
+  202: saved Normal 1500
+  203: saved Normal 1500
+  205: saved Normal 1500
+  207: saved Normal 0
+  208: saved Normal 818
+  209: saved Normal 1500
+  210: saved Normal 1500
+  212: saved Normal 1000
+  213: saved Normal 1500
+  214: saved Normal 0
+  215: saved Normal 1500
+  217: saved Normal 211
+  219: saved Normal 1500
+  220: saved Normal 1500
+  221: saved Normal 1500
+  222: saved Normal 1500
+  223: saved Normal 1500
+  228: saved Normal 1500
+  230: saved Normal 1500
+  231: saved Normal 250
+  232: saved Normal 0
+  233: saved Normal 1375
+  234: saved Normal 1500
+[MIT-BIH] total Normal images: 53156
+[ST-T] 90 records
+  skip e0103: no ST/T episodes parsed
+  skip e0104: no ST/T episodes parsed
+  e0105: saved STChange 600
+  skip e0106: no ST/T episodes parsed
+  e0107: saved STChange 41
+  e0108: saved STChange 57
+  skip e0110: no ST/T episodes parsed
+  e0111: saved STChange 232
+  e0112: saved STChange 223
+  e0113: saved STChange 600
+  e0114: saved STChange 216
+  skip e0115: no ST/T episodes parsed
+  e0116: saved STChange 55
+  e0118: saved STChange 204
+  e0119: saved STChange 600
+  e0121: saved STChange 20
+  e0122: saved STChange 600
+  skip e0123: no ST/T episodes parsed
+  skip e0124: no ST/T episodes parsed
+  skip e0125: no ST/T episodes parsed
+  skip e0126: no ST/T episodes parsed
+  e0127: saved STChange 291
+  skip e0129: no ST/T episodes parsed
+  skip e0133: no ST/T episodes parsed
+  e0136: saved STChange 172
+  skip e0139: no ST/T episodes parsed
+  skip e0147: no ST/T episodes parsed
+  e0148: saved STChange 31
+  e0151: saved STChange 282
+  skip e0154: no ST/T episodes parsed
+  e0155: saved STChange 365
+  skip e0159: no ST/T episodes parsed
+  skip e0161: no ST/T episodes parsed
+  skip e0162: no ST/T episodes parsed
+  skip e0163: no ST/T episodes parsed
+  skip e0166: no ST/T episodes parsed
+  skip e0170: no ST/T episodes parsed
+  e0202: saved STChange 232
+  skip e0203: no ST/T episodes parsed
+  skip e0204: no ST/T episodes parsed
+  skip e0205: no ST/T episodes parsed
+  skip e0206: no ST/T episodes parsed
+  skip e0207: no ST/T episodes parsed
+  skip e0208: no ST/T episodes parsed
+  skip e0210: no ST/T episodes parsed
+  skip e0211: no ST/T episodes parsed
+  skip e0212: no ST/T episodes parsed
+  skip e0213: no ST/T episodes parsed
+  skip e0302: no ST/T episodes parsed
+  skip e0303: no ST/T episodes parsed
+  skip e0304: no ST/T episodes parsed
+  e0305: saved STChange 600
+  skip e0306: no ST/T episodes parsed
+  skip e0403: no ST/T episodes parsed
+  e0404: saved STChange 266
+  e0405: saved STChange 12
+  skip e0406: no ST/T episodes parsed
+  skip e0408: no ST/T episodes parsed
+  skip e0409: no ST/T episodes parsed
+  skip e0410: no ST/T episodes parsed
+  skip e0411: no ST/T episodes parsed
+  skip e0413: no ST/T episodes parsed
+  skip e0415: no ST/T episodes parsed
+  skip e0417: no ST/T episodes parsed
+  skip e0418: no ST/T episodes parsed
+  skip e0501: no ST/T episodes parsed
+  skip e0509: no ST/T episodes parsed
+  skip e0515: no ST/T episodes parsed
+  skip e0601: no ST/T episodes parsed
+  skip e0602: no ST/T episodes parsed
+  e0603: saved STChange 531
+  skip e0604: no ST/T episodes parsed
+  skip e0605: no ST/T episodes parsed
+  skip e0606: no ST/T episodes parsed
+  skip e0607: no ST/T episodes parsed
+  skip e0609: no ST/T episodes parsed
+  skip e0610: no ST/T episodes parsed
+  skip e0611: no ST/T episodes parsed
+  skip e0612: no ST/T episodes parsed
+  e0613: saved STChange 600
+  skip e0614: no ST/T episodes parsed
+  skip e0615: no ST/T episodes parsed
+  skip e0704: no ST/T episodes parsed
+  skip e0801: no ST/T episodes parsed
+  skip e0808: no ST/T episodes parsed
+  skip e0817: no ST/T episodes parsed
+  skip e0818: no ST/T episodes parsed
+  e1301: saved STChange 98
+  skip e1302: no ST/T episodes parsed
+  skip e1304: no ST/T episodes parsed
+[ST-T] total STChange images: 6928
+Images are under: /content/drive/MyDrive/ecg_stt_images
+Total images: 60084 | STChange: 6928 | Normal: 53156
+Records split -> Train:45 Val:6 Test:13
+Images split -> Train:45162 | Val:4207 | Test:10715
+[Balance] After undersample -> Train STChange: 6201 | Normal: 6201
+Class weights: [2. 2.]
+Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /root/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
+100%|██████████| 44.7M/44.7M [00:00<00:00, 144MB/s]
+
+=== Phase 1: head+temporal for 4 epochs ===
+[Head] 1/4 | train_loss=0.4117 acc=0.8062 | val_loss=0.1317 acc=0.9594 ba=0.8991
+[Head] 2/4 | train_loss=0.2888 acc=0.8770 | val_loss=0.1675 acc=0.9327 ba=0.9374
+[Head] 3/4 | train_loss=0.2402 acc=0.9013 | val_loss=0.1979 acc=0.9292 ba=0.9321
+[Head] 4/4 | train_loss=0.2022 acc=0.9182 | val_loss=1.1093 acc=0.5061 ba=0.7446
+
+=== Phase 2: fine-tune for 26 epochs ===
+[FT ] 5/30 | train_loss=0.0784 acc=0.9718 | val_loss=0.1904 acc=0.9296 ba=0.9636
+[FT ] 6/30 | train_loss=0.0275 acc=0.9904 | val_loss=0.3618 acc=0.9301 ba=0.9013
+[FT ] 7/30 | train_loss=0.0259 acc=0.9914 | val_loss=0.1357 acc=0.9470 ba=0.9726
+[FT ] 8/30 | train_loss=0.0182 acc=0.9942 | val_loss=0.0888 acc=0.9634 ba=0.9811
+[FT ] 9/30 | train_loss=0.0174 acc=0.9944 | val_loss=0.1776 acc=0.9477 ba=0.9730
+[FT ] 10/30 | train_loss=0.0085 acc=0.9974 | val_loss=0.1253 acc=0.9603 ba=0.8891
