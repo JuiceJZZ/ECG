@@ -1,0 +1,88 @@
+Classes: ['ABH', 'HMI', 'MI', 'Normal']
+Total samples: 928
+Train: 742 Test: 186
+
+=== Training backbone: resnet18 ===
+Downloading: "https://download.pytorch.org/models/resnet18-f37072fd.pth" to /root/.cache/torch/hub/checkpoints/resnet18-f37072fd.pth
+100%|██████████| 44.7M/44.7M [00:00<00:00, 114MB/s]
+/usr/local/lib/python3.11/dist-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+[resnet18][head] E1/3 train_acc=0.3248 val_acc=0.3925 time=291s
+[resnet18][head] E2/3 train_acc=0.4717 val_acc=0.4731 time=39s
+[resnet18][head] E3/3 train_acc=0.5175 val_acc=0.4839 time=39s
+/usr/local/lib/python3.11/dist-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+[resnet18][finetune] E4/15 train_acc=0.6873 val_acc=0.7849 time=42s
+[resnet18][finetune] E5/15 train_acc=0.8288 val_acc=0.8763 time=43s
+[resnet18][finetune] E6/15 train_acc=0.8922 val_acc=0.9140 time=40s
+[resnet18][finetune] E7/15 train_acc=0.9191 val_acc=0.9032 time=41s
+[resnet18][finetune] E8/15 train_acc=0.9380 val_acc=0.9355 time=41s
+[resnet18][finetune] E9/15 train_acc=0.9488 val_acc=0.9355 time=41s
+[resnet18][finetune] E10/15 train_acc=0.9596 val_acc=0.9355 time=42s
+[resnet18][finetune] E11/15 train_acc=0.9811 val_acc=0.9247 time=39s
+[resnet18][finetune] E12/15 train_acc=0.9636 val_acc=0.9624 time=40s
+[resnet18][finetune] E13/15 train_acc=0.9609 val_acc=0.9355 time=41s
+[resnet18][finetune] E14/15 train_acc=0.9690 val_acc=0.9624 time=44s
+[resnet18][finetune] E15/15 train_acc=0.9757 val_acc=0.9086 time=41s
+Downloading: "https://download.pytorch.org/models/mobilenet_v2-b0353104.pth" to /root/.cache/torch/hub/checkpoints/mobilenet_v2-b0353104.pth
+
+=== Training backbone: mobilenet_v2 ===
+100%|██████████| 13.6M/13.6M [00:00<00:00, 196MB/s]
+/usr/local/lib/python3.11/dist-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+[mobilenet_v2][head] E1/3 train_acc=0.3935 val_acc=0.2796 time=42s
+[mobilenet_v2][head] E2/3 train_acc=0.4879 val_acc=0.5430 time=40s
+[mobilenet_v2][head] E3/3 train_acc=0.5714 val_acc=0.5269 time=38s
+/usr/local/lib/python3.11/dist-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+[mobilenet_v2][finetune] E4/15 train_acc=0.6361 val_acc=0.7903 time=44s
+[mobilenet_v2][finetune] E5/15 train_acc=0.7992 val_acc=0.8441 time=39s
+[mobilenet_v2][finetune] E6/15 train_acc=0.8518 val_acc=0.8710 time=41s
+[mobilenet_v2][finetune] E7/15 train_acc=0.8706 val_acc=0.8763 time=42s
+[mobilenet_v2][finetune] E8/15 train_acc=0.9137 val_acc=0.9032 time=43s
+[mobilenet_v2][finetune] E9/15 train_acc=0.9178 val_acc=0.9032 time=41s
+[mobilenet_v2][finetune] E10/15 train_acc=0.9218 val_acc=0.9247 time=41s
+[mobilenet_v2][finetune] E11/15 train_acc=0.9097 val_acc=0.9194 time=42s
+[mobilenet_v2][finetune] E12/15 train_acc=0.9259 val_acc=0.9247 time=40s
+[mobilenet_v2][finetune] E13/15 train_acc=0.9245 val_acc=0.9409 time=43s
+[mobilenet_v2][finetune] E14/15 train_acc=0.9434 val_acc=0.9462 time=42s
+[mobilenet_v2][finetune] E15/15 train_acc=0.9609 val_acc=0.9516 time=41s
+
+=== Training backbone: resnet50 ===
+Downloading: "https://download.pytorch.org/models/resnet50-0676ba61.pth" to /root/.cache/torch/hub/checkpoints/resnet50-0676ba61.pth
+100%|██████████| 97.8M/97.8M [00:00<00:00, 198MB/s]
+/usr/local/lib/python3.11/dist-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+[resnet50][head] E1/3 train_acc=0.3140 val_acc=0.4355 time=36s
+[resnet50][head] E2/3 train_acc=0.4555 val_acc=0.5860 time=35s
+[resnet50][head] E3/3 train_acc=0.5121 val_acc=0.4247 time=37s
+/usr/local/lib/python3.11/dist-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+[resnet50][finetune] E4/15 train_acc=0.7156 val_acc=0.8118 time=39s
+[resnet50][finetune] E5/15 train_acc=0.8558 val_acc=0.9032 time=39s
+[resnet50][finetune] E6/15 train_acc=0.8935 val_acc=0.9570 time=40s
+[resnet50][finetune] E7/15 train_acc=0.9084 val_acc=0.9247 time=39s
+[resnet50][finetune] E8/15 train_acc=0.9205 val_acc=0.9301 time=41s
+[resnet50][finetune] E9/15 train_acc=0.9528 val_acc=0.9624 time=39s
+[resnet50][finetune] E10/15 train_acc=0.9569 val_acc=0.9462 time=39s
+[resnet50][finetune] E11/15 train_acc=0.9569 val_acc=0.9355 time=39s
+[resnet50][finetune] E12/15 train_acc=0.9542 val_acc=0.9677 time=40s
+[resnet50][finetune] E13/15 train_acc=0.9717 val_acc=0.9570 time=40s
+[resnet50][finetune] E14/15 train_acc=0.9811 val_acc=0.9355 time=39s
+[resnet50][finetune] E15/15 train_acc=0.9744 val_acc=0.9409 time=38s
+
+Saved comparison to /content/model_comparison.csv
+       backbone  best_val_acc  macro_f1  weighted_f1    params  best_epoch
+0      resnet18      0.962366  0.959206     0.962287  11178564          12
+1  mobilenet_v2      0.951613  0.948851     0.951164   2228996          15
+2      resnet50      0.967742  0.964683     0.967728  23516228          12
+
+=== Ensemble (average logits of saved best models) ===
+Ensemble acc: 0.9623655913978495 macro_f1: 0.9586286793457462 weighted_f1: 0.9620211328726956
+Saved ensemble_report.csv and model_comparison.csv
+
+Per-model summary:
+       backbone  best_val_acc  macro_f1  weighted_f1    params  best_epoch
+0      resnet18      0.962366  0.959206     0.962287  11178564          12
+1  mobilenet_v2      0.951613  0.948851     0.951164   2228996          15
+2      resnet50      0.967742  0.964683     0.967728  23516228          12
