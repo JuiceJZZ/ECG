@@ -1,0 +1,77 @@
+Classes: ['ABH', 'HMI', 'MI', 'Normal']
+  ABH: 233 images
+  HMI: 172 images
+  MI: 239 images
+  Normal: 284 images
+Total samples: 928
+Train: 742 Test: 186
+Backbone: resnet18
+Train class counts: [186, 138, 191, 227]
+=== Phase 1: training classifier head only for 4 epochs ===
+/usr/local/lib/python3.11/dist-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+[Head] Epoch 1/4 train_acc=0.3248 val_acc=0.3925 train_loss=5.6730 val_loss=5.2933 time=118s
+  New best saved: /content/ecg_checkpoints_staged/best_model.pth
+[Head] Epoch 2/4 train_acc=0.4717 val_acc=0.4731 train_loss=4.9122 val_loss=4.8157 time=39s
+  New best saved: /content/ecg_checkpoints_staged/best_model.pth
+[Head] Epoch 3/4 train_acc=0.5175 val_acc=0.4839 train_loss=4.5796 val_loss=4.6492 time=39s
+  New best saved: /content/ecg_checkpoints_staged/best_model.pth
+[Head] Epoch 4/4 train_acc=0.5404 val_acc=0.6129 train_loss=4.4850 val_loss=4.2852 time=40s
+  New best saved: /content/ecg_checkpoints_staged/best_model.pth
+=== Phase 2: unfreeze all params and fine-tune for remaining epochs ===
+/usr/local/lib/python3.11/dist-packages/torch/optim/lr_scheduler.py:62: UserWarning: The verbose parameter is deprecated. Please use get_last_lr() to access the learning rate.
+  warnings.warn(
+[FineTune] Epoch 5/30 train_acc=0.7291 val_acc=0.7796 train_loss=3.3062 val_loss=2.8035 time=41s
+  New best saved: /content/ecg_checkpoints_staged/best_model.pth
+[FineTune] Epoch 6/30 train_acc=0.8383 val_acc=0.8226 train_loss=2.3465 val_loss=2.3916 time=41s
+  New best saved: /content/ecg_checkpoints_staged/best_model.pth
+[FineTune] Epoch 7/30 train_acc=0.8854 val_acc=0.8763 train_loss=1.8468 val_loss=2.6697 time=40s
+  New best saved: /content/ecg_checkpoints_staged/best_model.pth
+[FineTune] Epoch 8/30 train_acc=0.9232 val_acc=0.9032 train_loss=1.5789 val_loss=1.6834 time=40s
+  New best saved: /content/ecg_checkpoints_staged/best_model.pth
+[FineTune] Epoch 9/30 train_acc=0.9245 val_acc=0.9462 train_loss=1.5178 val_loss=1.5669 time=40s
+  New best saved: /content/ecg_checkpoints_staged/best_model.pth
+[FineTune] Epoch 10/30 train_acc=0.9474 val_acc=0.9086 train_loss=1.4160 val_loss=1.6758 time=40s
+[FineTune] Epoch 11/30 train_acc=0.9717 val_acc=0.9570 train_loss=1.2452 val_loss=1.5022 time=40s
+  New best saved: /content/ecg_checkpoints_staged/best_model.pth
+[FineTune] Epoch 12/30 train_acc=0.9636 val_acc=0.9301 train_loss=1.3256 val_loss=1.3473 time=40s
+[FineTune] Epoch 13/30 train_acc=0.9515 val_acc=0.9570 train_loss=1.2850 val_loss=1.4042 time=39s
+[FineTune] Epoch 14/30 train_acc=0.9663 val_acc=0.9624 train_loss=1.2425 val_loss=1.3803 time=42s
+  New best saved: /content/ecg_checkpoints_staged/best_model.pth
+[FineTune] Epoch 15/30 train_acc=0.9771 val_acc=0.9516 train_loss=1.1916 val_loss=1.4093 time=39s
+[FineTune] Epoch 16/30 train_acc=0.9879 val_acc=0.9677 train_loss=1.0740 val_loss=1.3338 time=39s
+  New best saved: /content/ecg_checkpoints_staged/best_model.pth
+[FineTune] Epoch 17/30 train_acc=0.9623 val_acc=0.9570 train_loss=1.2248 val_loss=1.3014 time=40s
+[FineTune] Epoch 18/30 train_acc=0.9704 val_acc=0.9409 train_loss=1.1730 val_loss=1.4693 time=41s
+[FineTune] Epoch 19/30 train_acc=0.9744 val_acc=0.9785 train_loss=1.1569 val_loss=1.2681 time=40s
+  New best saved: /content/ecg_checkpoints_staged/best_model.pth
+[FineTune] Epoch 20/30 train_acc=0.9811 val_acc=0.9516 train_loss=1.1023 val_loss=1.2611 time=39s
+[FineTune] Epoch 21/30 train_acc=0.9919 val_acc=0.9462 train_loss=1.0267 val_loss=1.2899 time=39s
+[FineTune] Epoch 22/30 train_acc=0.9906 val_acc=0.9731 train_loss=0.9897 val_loss=1.2966 time=40s
+[FineTune] Epoch 23/30 train_acc=0.9852 val_acc=0.9355 train_loss=1.0570 val_loss=1.3059 time=41s
+[FineTune] Epoch 24/30 train_acc=0.9879 val_acc=0.9355 train_loss=1.0131 val_loss=1.4210 time=40s
+[FineTune] Epoch 25/30 train_acc=0.9825 val_acc=0.9570 train_loss=1.0325 val_loss=1.2603 time=40s
+[FineTune] Epoch 26/30 train_acc=0.9960 val_acc=0.9624 train_loss=0.9410 val_loss=1.2313 time=40s
+[FineTune] Epoch 27/30 train_acc=0.9973 val_acc=0.9516 train_loss=0.9239 val_loss=1.2448 time=42s
+Early stopping triggered in phase 2. wait = 8
+Training finished. Best val: 0.978494623655914 best_path: /content/ecg_checkpoints_staged/best_model.pth
+Classification report:
+               precision    recall  f1-score   support
+
+         ABH       0.96      0.96      0.96        47
+         HMI       1.00      0.94      0.97        34
+          MI       1.00      1.00      1.00        48
+      Normal       0.97      1.00      0.98        57
+
+    accuracy                           0.98       186
+   macro avg       0.98      0.97      0.98       186
+weighted avg       0.98      0.98      0.98       186
+
+Confusion matrix:
+ [[45  0  0  2]
+ [ 2 32  0  0]
+ [ 0  0 48  0]
+ [ 0  0  0 57]]
+Saved logs: /content/ecg_train_log_staged.csv
+Saved final report: /content/final_classification_report_staged.csv
+Saved curves: /content/train_val_curves_staged.png

@@ -1,0 +1,4 @@
+/content/drive/MyDrive/data/ABH/HB(99).jpg	true=ABH	pred=Normal
+/content/drive/MyDrive/data/HMI/PMI(61).jpg	true=HMI	pred=ABH
+/content/drive/MyDrive/data/ABH/HB(62).jpg	true=ABH	pred=Normal
+/content/drive/MyDrive/data/HMI/PMI(147).jpg	true=HMI	pred=ABH
